@@ -12,8 +12,8 @@ print(data["Aging (days)"].describe())
 filtered_data = data[
     (data["Status"] == " **Released**") &
     (data["Category"] != "Monitors") &
-    (data["Aging (days)"] >= 30)
-    (data["Category"] != "Servers") &
+    (data["Aging (days)"] >= 30) &
+    (data["Category"] != "Servers") 
     #This makes sure that the data must include all 3 of these filters. & allows us to do so. The () is important as each line is a special segment to itself
 ]
 
